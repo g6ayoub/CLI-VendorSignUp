@@ -58,6 +58,7 @@ class Vendor
     puts "Website:"
     website = gets.chomp
     puts "Thank you! We have automatically generated this flyer for you to share:"
+    puts "\n"
 
     @social_sites = [instagram, twitter, tiktok, facebook, website]
 
