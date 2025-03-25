@@ -12,7 +12,7 @@ _______________________________________
 |_____________________________________|
 
 "
-puts "Check out our amazing collection of #{@products}!"
+puts "\nCheck out our amazing collection of #{@products}!"
 puts "\nJuly 25th @ 1234 Chicago Ave"
 puts "\nand visit us online at: \n
 Website: #{social_sites[4]} \n
