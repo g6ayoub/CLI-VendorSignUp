@@ -49,15 +49,15 @@ class Vendor
   def marketing
     puts "\n"
    puts "Please enter #{@business_name}'s social media handle(s)or website for our marketing materials! You can skip if you would like by pressing 'Enter' or 'Return' on your device."
-    puts "Instagram:"
+    puts "\nInstagram:"
     instagram = gets.chomp
-    puts "Twitter:"
+    puts "\nTwitter:"
     twitter = gets.chomp
-    puts "TikTok:"
+    puts "\nTikTok:"
     tiktok = gets.chomp
-    puts "Facebook:"
+    puts "\nFacebook:"
     facebook = gets.chomp
-    puts "Website:"
+    puts "\nWebsite:"
     website = gets.chomp
     puts "\n"
     puts "Thank you! We have automatically generated this flyer for you to share:"
