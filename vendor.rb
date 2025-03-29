@@ -1,7 +1,7 @@
 require "./flyer.rb"
 
 class Vendor
-  attr_accessor :your_name, :business_name, :products, :registration_id, :social_sites, :slogan
+  attr_accessor :your_name, :business_name, :products, :registration_id, :social_sites, :email
 
   def initalize 
     @your_name = your_name
@@ -10,7 +10,7 @@ class Vendor
     @registration_id = registration_id
   end
 
-  def registration 
+  def vendor_screening 
     puts "Hello! Would you like to register for the Roger's Park Artisan Market?\nPlease type y for 'Yes' or n for 'no'"
     answer = gets.chomp 
     case answer
@@ -21,7 +21,7 @@ class Vendor
       puts "\nWe hope to see you there!"
     else
       puts "\nSorry, we didn't get that, please type 'y' to register or 'n' to exit!"
-      registration
+      vendor_screening
     end
   end
   
@@ -35,8 +35,27 @@ class Vendor
     puts "\nWhat types of products will you be showcasing?"
     @products = gets.capitalize.chomp
     puts "\nWonderful! We're excited to check out #{@business_name}'s #{@products}!"
+    collect_email
+  end
+
+    def collect_email
+    puts "\n"
+    puts "\nPlease enter the e-mail address that you would like us to contact you through:"
+    email1 = gets.chomp
+    puts "\n"
+    puts "\nPlease re-enter your e-mail address to confirm."
+    email2 = gets.chomp
+    if email1 == email2
+      puts "\n"
+      puts"\nThank you! We will contact you with more details shortly."
+    else
+      puts "\n"
+      puts "The e-mail addresses you entered did not match, please re-enter your e-mail address."
+      collect_email
+    end
     generate_id
   end
+  
 
   def generate_id
     @registration_id = rand(10_000..20_000)

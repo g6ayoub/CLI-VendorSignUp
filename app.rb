@@ -3,4 +3,4 @@ require "./flyer.rb"
 
 vendor = Vendor.new
 
-vendor.registration
+vendor.vendor_screening
