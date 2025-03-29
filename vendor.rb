@@ -12,12 +12,12 @@ class Vendor
 
   def vendor_screening 
     puts "Hello! Would you like to register for the Roger's Park Artisan Market?\nPlease type y for 'Yes' or n for 'no'"
-    answer = gets.chomp 
+    answer = gets.capitalize.chomp 
     case answer
-    when "y"
+    when "Y"
       puts "\nGreat! Let's get started."
       register 
-    when "n"
+    when "N"
       puts "\nWe hope to see you there!"
     else
       puts "\nSorry, we didn't get that, please type 'y' to register or 'n' to exit!"
@@ -42,7 +42,13 @@ class Vendor
     puts "\n"
     puts "\nPlease enter the e-mail address that you would like us to contact you through:"
     email1 = gets.chomp
+    if !email1.include?("@")
+      puts "\n"
+      puts "Invalid e-mail address. Please enter it again:"
+      email1 = gets.chomp
+    else
     puts "\n"
+    end 
     puts "\nPlease re-enter your e-mail address to confirm."
     email2 = gets.chomp
     if email1 == email2
