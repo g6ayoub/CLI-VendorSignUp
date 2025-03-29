@@ -46,14 +46,15 @@ class Vendor
     puts "\nPlease re-enter your e-mail address to confirm."
     email2 = gets.chomp
     if email1 == email2
+      @email = email2
       puts "\n"
       puts"\nThank you! We will contact you with more details shortly."
+      generate_id
     else
       puts "\n"
       puts "The e-mail addresses you entered did not match, please re-enter your e-mail address."
       collect_email
     end
-    generate_id
   end
   
 
