@@ -1,5 +1,6 @@
-# ruby-cli-template
+# VendorRegistration Cli
 
-Use this repository as a template for your Ruby CLI (command line interface) project.
+Ruby CLI (command line interface) app that manages vendor registration for events and markets.
+## Operation
 
-- Ruby version: `3.2.1`
+Run ```ruby app.rb``` in the terminal.
