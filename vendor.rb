@@ -37,21 +37,24 @@ class Vendor
     puts "\nWonderful! We're excited to check out #{@business_name}'s #{@products}!"
     collect_email
   end
-
-    def collect_email
-    puts "\n"
-    puts "\nPlease enter the e-mail address that you would like us to contact you through:"
-    email1 = gets.chomp
-    if !email1.include?("@")
+  def initial_email
+    @email1 = gets.chomp
+    if !@email1.include?("@") 
       puts "\n"
       puts "Invalid e-mail address. Please enter it again:"
-      email1 = gets.chomp
+      initial_email
     else
     puts "\n"
     end 
+  end
+    def collect_email
+    puts "\n"
+    puts "\nPlease enter the e-mail address that you would like us to contact you through:"
+    initial_email
+
     puts "\nPlease re-enter your e-mail address to confirm."
     email2 = gets.chomp
-    if email1 == email2
+    if @email1 == email2
       @email = email2
       puts "\n"
       puts"\nThank you! We will contact you with more details shortly."
@@ -63,7 +66,6 @@ class Vendor
     end
   end
   
-
   def generate_id
     @registration_id = rand(10_000..20_000)
     puts "\n"
